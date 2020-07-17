@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "mongoGo": "brew services start mongodb-community@4.2",
+    "mongoStop": "brew services stop mongodb-community@4.2"
   },
   "keywords": [],
   "author": "Connor Dillon",

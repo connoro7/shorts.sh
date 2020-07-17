@@ -3,7 +3,15 @@ const cors = require('cors')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const yup = require('yup')
+const monk = require('monk')
 const { nanoid } = require('nanoid')
+
+require('dotenv').config()
+
+const db = monk(process.env.MONGO_URI)
+const urls = db.get('urls')
+urls.createIndex('name')
+// urls.createIndex({ name: 1 }, { unique: true })
 
 const app = express()
 
@@ -12,13 +20,6 @@ app.use(morgan('tiny'))
 app.use(cors())
 app.use(express.json())
 app.use(express.static('./public'))
-
-// app.get('/', (res, req) => {
-// Test: navigate to http://localhost:${PORT} to verify API is served correctly
-//   res.json({
-//     message: 'connor.sh - Short URLs for your code garden',
-//   })
-// })
 
 app.get('/url/:id', (req, res) => {
   //todo: get a short url by id
@@ -46,11 +47,21 @@ app.post('/url', async (req, res, next) => {
     if (!slug) {
       slug = nanoid(5)
     }
+    /// Manually check if a slug is in use
+    else {
+      const existing = await urls.findOne({ slug })
+      if (existing) {
+        throw new Error('Slug in use')
+      }
+    }
+
     slug = slug.toLowerCase()
-    res.json({
-      slug,
+    const newUrl = {
       url,
-    })
+      slug,
+    }
+    const created = await urls.insert(newUrl)
+    res.json(created)
   } catch (error) {
     next(error)
   }
