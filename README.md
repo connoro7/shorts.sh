@@ -1,6 +1,6 @@
-# shorts.sh (Now ezl.ink)
+# shorts.sh @ [ezl.ink](http://ezl.ink))
 
-URL Shortener
+A simple, intuitive URL Shortener for the modern age.
 
 ## Available at [ezl.ink](http://ezl.ink)
 
