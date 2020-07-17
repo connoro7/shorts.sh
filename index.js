@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(express.static('./public'))
 
 app.get('/url/:id', (req, res) => {
-  //todo: get a short url by id
+  //todo: get a short url by idd
 })
 
 app.get('/:id', async (req, res) => {
