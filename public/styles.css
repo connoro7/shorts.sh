@@ -50,10 +50,41 @@ header h1 {
   color: #4f4f4f;
 }
 
-#sticky-footer .footer_text {
+#sticky-footer .footer-text {
   font-size: 17px;
   line-height: 60px;
   float: center;
+}
+
+.help {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.help-icon {
+}
+
+.help .help-text {
+  visibility: hidden;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 /*
