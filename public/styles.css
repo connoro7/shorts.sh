@@ -4,8 +4,25 @@
   padding: 0;
 }
 
+* a {
+  text-decoration: none;
+}
+
+html {
+  background: linear-gradient(to right, #0062e6, #33aeff);
+}
+
+html,
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  color: #2f2f2f;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 100px; /* bottom = footer height */
 }
 
 header h1 {
@@ -16,4 +33,73 @@ header h1 {
 #app {
   width: 60%;
   margin: 0 auto;
+  flex: 1 0 auto;
 }
+
+#sticky-footer {
+  flex-shrink: none;
+  text-align: center;
+}
+
+#sticky-footer a {
+  color: #3f3f3f;
+  margin: 5px;
+}
+
+#sticky-footer a:hover {
+  color: #4f4f4f;
+}
+
+#sticky-footer .footer-text {
+  font-size: 17px;
+  line-height: 60px;
+  float: center;
+}
+
+.help {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+.help-icon {
+}
+
+.help .help-text {
+  visibility: hidden;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/*
+footer .footer_icons {
+  /* margin-left: 5%; * /
+  text-align: center;
+  display: inline;
+}
+
+footer .footer_icons a {
+  /* float: left; */
+/* padding-right: 10px; * /
+  
+}
+footer .footer_icons a:hover {
+  color: grey;
+} 
+*/
