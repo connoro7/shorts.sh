@@ -21,22 +21,29 @@ app.use(express.json())
 app.use(express.static('./public'))
 
 app.get('/url/:id', (req, res) => {
-  //todo: get a short url by idd
+  //todo: get a short url by id
 })
 
 app.get('/:id', async (req, res) => {
+  /// Destructure request parameters to ID and Slug object
   const { id: slug } = req.params
+  ///
   try {
+    /// Waits for db.get('urls').findOne({slug}) to be returned from DB, returns boolean
     const url = await urls.findOne({ slug })
+    /// If url === true,
     if (url) {
       res.redirect(url.url)
     }
+
     res.redirect(`/?error=${slug}-not-found`)
+    /// If no
   } catch (error) {
     res.redirect(`/?error=Link-not-found`)
   }
 })
 
+/// Yup schema for converting to correct output format
 const schema = yup.object().shape({
   slug: yup
     .string()
@@ -48,10 +55,12 @@ const schema = yup.object().shape({
 app.post('/url', async (req, res, next) => {
   let { slug, url } = req.body
   try {
+    /// Wait for yup.object().shape({}).validate({}) to return
     await schema.validate({
       slug,
       url,
     })
+    /// If slug does not exist, assign slug a random UUID
     if (!slug) {
       slug = nanoid(5)
     }
@@ -62,19 +71,23 @@ app.post('/url', async (req, res, next) => {
         throw new Error('Slug in use')
       }
     }
-
+    /// Convert slug to lowercase so that we don't have to deal with case sensitivity :)
     slug = slug.toLowerCase()
+    /// Creates object with base URL and slug
     const newUrl = {
       url,
       slug,
     }
+    /// Returns output as JSON
     const created = await urls.insert(newUrl)
     res.json(created)
+    /// Error catching
   } catch (error) {
     next(error)
   }
 })
 
+/// Error handling
 app.use((error, req, res, next) => {
   if (error.status) {
     res.status(error.status)

@@ -19,12 +19,19 @@
         <input v-model="slug" name="slug" id="slug" />
         <button type="submit">Create</button>
       </form>
-      <pre v-if="created">
-        {{
-          JSON.stringify(created, null, 2) 
-        }}
-      </pre>
+      <div class="output"></div>
+      <pre v-if="created">{{JSON.stringify(created, null, 2)}}</pre>
+
+      <!-- 
+        <form v-if="created" @submit.prevent="copyLink()">
+        <label for="created">Short Link:</label>
+
+        <input v-model="output" type="url" name="output" id="output" placeholder="http://ezl.ink/{{JSON.stringify(created)}}" />
+        <button type="button" onclick="copyLink()">Copy Link</button>
+      </form>
+     -->
     </main>
+    <foorter> </foorter>
     <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
     <script src="app.js"></script>
   </body>
