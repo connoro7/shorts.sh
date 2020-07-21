@@ -36,6 +36,9 @@ header h1 {
   flex: 1 0 auto;
 }
 
+#app button {
+}
+
 #sticky-footer {
   flex-shrink: none;
   text-align: center;
@@ -66,11 +69,11 @@ header h1 {
 }
 
 .help .help-text {
-  visibility: hidden;
+  visibility: visible;
   z-index: 1;
 }
 
-.tooltip .tooltiptext {
+/* .tooltip .tooltiptext {
   visibility: hidden;
   width: 140px;
   background-color: #555;
@@ -85,7 +88,7 @@ header h1 {
   margin-left: -75px;
   opacity: 0;
   transition: opacity 0.3s;
-}
+} */
 
 /*
 footer .footer_icons {

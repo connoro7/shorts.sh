@@ -5,25 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ezl.ink</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://ez-css.now.sh" />
+    <!-- <link rel="stylesheet" href="https://ez-css.now.sh" /> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
   </head>
   <body>
     <div class="help">
       <i class="fa fa-question-circle fa-lg help help-icon"></i>
-      <span class="help help-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis voluptatem veniam aliquam officia minima, aspernatur soluta molestias sed quia placeat.</span>
+      <span class="help help-text">Help dialogue</span>
     </div>
 
     <header>
       <h1>ezl.ink</h1>
     </header>
     <main id="app">
-      <form @submit.prevent="createUrl()">
+      <form @submit.prevent="createUrl() ">
         <label for="url">URL</label>
         <input v-model="url" name="url" id="url" />
         <label for="slug">Slug</label>
