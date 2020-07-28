@@ -37,7 +37,7 @@ app.get('/:id', async (req, res) => {
     }
 
     res.redirect(`/?error=${slug}-not-found`)
-    /// If no
+    /// If no link in DB, catch error and redirect to 404 query
   } catch (error) {
     res.redirect(`/?error=Link-not-found`)
   }
