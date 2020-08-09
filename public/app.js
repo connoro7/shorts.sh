@@ -8,7 +8,7 @@ const app = new Vue({
   },
   methods: {
     async createUrl() {
-      console.log(`URL: ${this.url}, Slug: ${this.slug}, Output: ${this.output}`)
+      // console.log(`URL: ${this.url}, Slug: ${this.slug}, Output: http://ezl.ink/${this.slug}`)
       const response = await fetch('/url', {
         method: 'POST',
         headers: {
@@ -17,12 +17,13 @@ const app = new Vue({
         body: JSON.stringify({
           url: this.url,
           slug: this.slug,
-          output: `${this.url}/${this.slug}`,
+          output: `http://ezl.ink/${this.slug}`,
         }),
       })
+      // Feeds into output in index.html
       this.created = await response.json()
     },
   },
 })
 
-output.addEventListener('click', {})
+// output.addEventListener('click', {})

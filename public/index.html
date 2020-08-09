@@ -4,22 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ezl.ink</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- & EZ-CSS -->
     <!-- <link rel="stylesheet" href="https://ez-css.now.sh" /> -->
+    <!-- & Font Awesome  -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- & Bootstrap -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    /> 
+    -->
+    <!-- & Tailwind  -->
+    <!--
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" /> 
+    -->
     <link rel="shortcut icon" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/gif" href="favicon/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="help">
+    <div id="help">
       <i class="fa fa-question-circle fa-lg help help-icon"></i>
-      <span class="help help-text">Help dialogue</span>
+      <span class="help help-text">Help</span>
     </div>
 
     <header>
@@ -31,10 +44,11 @@
         <input v-model="url" name="url" id="url" />
         <label for="slug">Slug</label>
         <input v-model="slug" name="slug" id="slug" />
+        <br />
         <button type="submit">Create</button>
       </form>
-      <div class="output"></div>
-      <pre v-if="created">{{JSON.stringify(created, null, 2)}}</pre>
+      <pre class="output" v-if="created">{{JSON.stringify(created, null, 2)}}</pre>
+      <div class="full-link"></div>
 
       <!-- 
         <form v-if="created" @submit.prevent="copyLink()">
@@ -48,12 +62,13 @@
     <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
       <div class="container text-center footer_icons">
         <a href="mailto:connor@codewithconnor.com">
-          <i class="fa fa-envelope fa"></i>
+          <i class="fa fa-envelope fa-2x"></i>
+        </a>
           <a href="https://github.com/connoro7">
-            <i class="fa fa-github fa"></i>
+            <i class="fa fa-github fa-2x"></i>
           </a>
           <a href="https://www.linkedin.com/in/connordillon/">
-            <i class="fa fa-linkedin fa"></i>
+            <i class="fa fa-linkedin fa-2x"></i>
           </a>
         </a>
       </div>

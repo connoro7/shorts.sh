@@ -53,7 +53,7 @@ const schema = yup.object().shape({
 })
 
 app.post('/url', async (req, res, next) => {
-  let { slug, url } = req.body
+  let { slug, url, output } = req.body
   try {
     /// Wait for yup.object().shape({}).validate({}) to return
     await schema.validate({
@@ -77,6 +77,7 @@ app.post('/url', async (req, res, next) => {
     const newUrl = {
       url,
       slug,
+      output,
     }
     /// Returns output as JSON
     const created = await urls.insert(newUrl)
