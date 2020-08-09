@@ -1,0 +1,45 @@
+footer .footer_icons {
+  place-items: center;
+  text-align: center;
+  display: inline; }
+
+footer {
+  flex-shrink: none;
+  text-align: center; }
+
+footer a {
+  color: #3f3f3f;
+  margin: 5px; }
+
+footer a:hover {
+  color: #4f4f4f; }
+
+.footer-text {
+  font-size: 12px;
+  line-height: 60px;
+  float: center; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.child {
+  /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
+  /* If we don't want the items to stretch: */
+  flex: 0 1 300px;
+  /* If we do want the items to stretch: */
+  flex: 1 1 300px;
+  /* etc. */
+  border: 1px solid red;
+  background: lightpink;
+  font-size: 2rem;
+  text-align: center; }
