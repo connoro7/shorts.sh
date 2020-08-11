@@ -1,25 +1,20 @@
 footer .footer_icons {
   place-items: center;
   text-align: center;
-  display: inline;
-}
+  display: inline; }
 
 footer {
   flex-shrink: none;
-  text-align: center;
-}
+  text-align: center; }
 
 footer a {
   color: #3f3f3f;
-  margin: 5px;
-}
+  margin: 5px; }
 
 footer a:hover {
-  color: #5f5f5f;
-}
+  color: #5f5f5f; }
 
 .footer-text {
   font-size: 12px;
   line-height: 60px;
-  float: center;
-}
+  float: center; }

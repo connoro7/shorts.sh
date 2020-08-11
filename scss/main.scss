@@ -1,30 +1,56 @@
-@import 'footer';
-
-* {
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  background: linear-gradient(to right, #0062e6, #33aeff);
+}
+
+html,
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #1f1f1f;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  // flex-direction: rows;
+  // flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+}
+
+.child {
+  flex: 0 1 300px;
+  text-align: center;
+  width: 50vw;
 }
 
 a {
   text-decoration: none;
 }
 
-.parent {
-  display: flex;
-  flex-wrap: wrap;
+header {
+  font-size: 2rem;
   justify-content: center;
+  margin-top: 5vh;
 }
 
-.child {
-  /* flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ] */
-  /* If we don't want the items to stretch: */
-  flex: 0 1 300px;
-  /* If we do want the items to stretch: */
-  flex: 1 1 300px;
-  /* etc. */
-  border: 1px solid red;
-  background: lightpink;
-  font-size: 2rem;
-  text-align: center;
+#help {
+  display: none;
 }
+
+@import 'form';
+@import 'output';
+@import 'footer';
+@import 'media-queries';

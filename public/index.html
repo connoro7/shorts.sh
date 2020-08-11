@@ -35,17 +35,18 @@
       <span class="help help-text">Help</span>
     </div>
 
-    <header>
+    <header class="child">
       <h1>ezl.ink</h1>
     </header>
-    <main id="app">
+    <main class="child" id="app">
       <form @submit.prevent="createUrl() ">
         <label for="url">URL</label>
         <input v-model="url" name="url" id="url" />
+        <br/>
         <label for="slug">Slug</label>
         <input v-model="slug" name="slug" id="slug" />
         <br />
-        <button type="submit">Create</button>
+        <button class="btn fas icon-arrow-right fa" type="submit">Create</button>
       </form>
       <pre class="output" v-if="created">{{JSON.stringify(created, null, 2)}}</pre>
       <div class="full-link"></div>
@@ -59,7 +60,7 @@
       </form>
      -->
     </main>
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <footer id="sticky-footer" class="child">
       <div class="container text-center footer_icons">
         <a href="mailto:connor@codewithconnor.com">
           <i class="fa fa-envelope fa-2x"></i>
