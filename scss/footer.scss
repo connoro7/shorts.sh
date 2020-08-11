@@ -7,6 +7,7 @@ footer .footer_icons {
 footer {
   flex-shrink: none;
   text-align: center;
+  height: $footer-height;
 }
 
 footer a {
@@ -21,5 +22,6 @@ footer a:hover {
 .footer-text {
   font-size: 12px;
   line-height: 60px;
-  float: center;
+  margin-top: 1rem;
+  // float: center;
 }

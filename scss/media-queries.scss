@@ -1,0 +1,54 @@
+@media screen and (max-width: 700px) {
+  .body {
+    width: 90vw;
+  }
+  .btn {
+    padding: 15px 30px;
+    width: 100%;
+  }
+  .footer-text {
+    font-size: 0.5rem;
+    line-height: 20px;
+  }
+}
+
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+) !default;
+
+@include media('>phone', '<tablet') {
+}
+
+@include media('>tablet', '<950px') {
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    // Screens 500px or less
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    // Screens 768px or less
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    // Screens between 769px and 1170px
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    // Screens 1171px and up
+    @content;
+  }
+}

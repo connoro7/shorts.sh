@@ -4,24 +4,24 @@ form {
 
 label {
   font-family: monospace;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 12px 12px;
+  margin: 15px;
 }
 
+/* Fixes width of form input fields so that they are equal */
 input {
-  width: 80%;
-  margin: 5px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-input,
-label {
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 input:focus {
@@ -29,6 +29,7 @@ input:focus {
 }
 
 .btn {
+  place-items: center;
   border: none;
   font-family: inherit;
   font-size: inherit;
@@ -37,7 +38,7 @@ input:focus {
   cursor: pointer;
   padding: 25px 80px;
   display: inline-block;
-  margin: 15px 30px;
+  margin: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
