@@ -75,9 +75,8 @@ input:focus {
   color: inherit;
   background: none;
   cursor: pointer;
-  padding: 25px 80px;
   display: inline-block;
-  margin: 15px;
+  margin-top: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -87,7 +86,7 @@ input:focus {
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
 
-.btn:after {
+.btn::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -95,9 +94,7 @@ input:focus {
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
 
-.btn:before {
-  font-family: 'icomoon';
-  speak: none;
+.btn::before {
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -106,13 +103,12 @@ input:focus {
   position: relative;
   -webkit-font-smoothing: antialiased; }
 
-.icon-arrow-right:before {
-  content: '\e00d'; }
-
 /* Pseudo elements for icons */
 .btn {
   background: #fcad26;
-  color: #fff; }
+  color: #fff;
+  padding: 25px 60px;
+  overflow: hidden; }
 
 .btn:hover {
   background: #f29e0d; }
@@ -121,25 +117,18 @@ input:focus {
   background: #f58500;
   top: 2px; }
 
-.btn:before {
+.btn::before {
   position: absolute;
   height: 100%;
-  left: 0;
+  left: auto;
+  right: 10px;
   top: 0;
   line-height: 3;
   font-size: 140%;
-  width: 60px; }
-
-.btn {
-  padding: 25px 120px 25px 60px;
-  overflow: hidden; }
-
-.btn:before {
-  left: auto;
-  right: 10px;
+  width: 60px;
   z-index: 2; }
 
-.btn:after {
+.btn::after {
   width: 30%;
   height: 200%;
   background: rgba(255, 255, 255, 0.1);
@@ -156,7 +145,7 @@ input:focus {
   transform-origin: 0 0;
   transform: rotate(-20deg); }
 
-.btn:hover:after {
+.btn:hover::after {
   width: 40%; }
 
 footer .footer_icons {
@@ -184,6 +173,8 @@ footer a:hover {
 @media screen and (max-width: 700px) {
   .body {
     width: 90vw; }
+  .child {
+    width: 80vw; }
   .btn {
     padding: 15px 30px;
     width: 100%; }
