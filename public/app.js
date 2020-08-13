@@ -36,18 +36,29 @@ window.onload = function () {
   // Get the <span> element that closes the modal
   let span = document.getElementsByClassName('close')[0]
 
+  let close = document.getElementById('close-modal')
+
   // When the user clicks on the button, open the modal
   btn.onclick = function () {
     modal.style.display = 'block'
+    console.log('btn event triggered, showing modal')
   }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     modal.style.display = 'none'
+    console.log('span close event triggered')
+  }
+
+  // When the user clicks on the `cancel` modal button, close the modal
+  close.onclick = function () {
+    modal.style.display = 'none'
+    console.log('close button event triggered')
   }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
+    console.log('user clicked away from modal, closing modal')
     if (event.target == modal) {
       modal.style.display = 'none'
     }

@@ -19,18 +19,20 @@
   width: auto;
   margin: 25% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid red;
   footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
   }
 
-  button {
+  .modal-btn {
+    text-transform: uppercase;
+    font-weight: 700;
     border: none;
     border-radius: 5px;
-    padding: 25px 50px;
+    padding: 0px 50px;
     margin: 0 10px 10px 0;
+    z-index: 10;
   }
 }
 
@@ -94,6 +96,7 @@ textarea {
   border: none;
   font-size: 1.5rem;
   z-index: 10;
+  margin: 2rem;
 }
 
 textarea:focus {
@@ -113,13 +116,19 @@ textarea::-moz-selection {
   z-index: 11;
 }
 
-.submit {
-  background: var(--submit-green);
+.modal-btn {
+  font-size: 1rem;
+}
+
+.copy-to-clip {
+  background: var(--blue-dark);
+  color: var(--white);
   cursor: pointer;
 }
 
 .cancel {
   background: var(--cancel-red);
+  color: var(--white);
   cursor: pointer;
 }
 
