@@ -1,3 +1,23 @@
+/** Global Color Palette */
+:root {
+  --blue-dark: #0062e6;
+  --blue-light: #33aeff;
+  --yellow-light: #fcad26;
+  --yellow-med: #f29e0d;
+  --yellow-dark: #f58500;
+  --grey-dark: #1f1f1f;
+  --grey-med-dark: #2f2f2f;
+  --grey-med: #3f3f3f;
+  --grey-med-light: #4f4f4f;
+  --grey-light: #5f5f5f;
+  --grey-extra-light: #8f8f8f;
+  --cancel-red: #da2632;
+  --submit-green: #8cda26;
+  --white: #ffffff;
+  --black: #000000;
+  --dim-overlay: rgba(255, 255, 255, 0.1);
+}
+/** */
 $footer-height: 60px;
 
 *,
@@ -11,13 +31,13 @@ $footer-height: 60px;
 }
 
 html {
-  background: linear-gradient(to right, #0062e6, #33aeff);
+  background: linear-gradient(to right, var(--blue-dark), var(--blue-light));
 }
 
 html,
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #1f1f1f;
+  color: var(--grey-dark);
   font-size: 100%;
   padding: 0;
   margin: 0;
@@ -41,10 +61,23 @@ a {
   text-decoration: none;
 }
 
+i {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
 header {
   font-size: 2rem;
   justify-content: center;
   margin-top: 5vh;
+}
+
+#output-link {
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+
+  margin: 3rem;
 }
 
 #help {
@@ -54,5 +87,6 @@ header {
 @import 'form';
 @import 'button';
 @import 'output';
+@import 'modal';
 @import 'footer';
 @import 'media-queries';

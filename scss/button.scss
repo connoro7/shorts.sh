@@ -40,18 +40,19 @@
 /* Pseudo elements for icons */
 
 .btn {
-  background: #fcad26;
-  color: #fff;
+  background: var(--yellow-light);
+
+  color: var(--white);
   padding: 25px 60px;
   overflow: hidden;
 }
 
 .btn:hover {
-  background: #f29e0d;
+  background: var(--yellow-med);
 }
 
 .btn:active {
-  background: #f58500;
+  background: var(--yellow-dark);
   top: 2px;
 }
 
@@ -70,7 +71,7 @@
 .btn::after {
   width: 30%;
   height: 200%;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--dim-overlay);
   z-index: 1;
   right: 0;
   top: 0;

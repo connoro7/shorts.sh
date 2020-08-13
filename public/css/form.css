@@ -22,4 +22,4 @@ input {
   padding-bottom: 0.5rem; }
 
 input:focus {
-  border: 3px solid #555; }
+  border: 2px solid var(--grey-dark); }
