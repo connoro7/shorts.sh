@@ -1,0 +1,125 @@
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */ }
+
+/* Modal Content/Box */
+.modal-content {
+  background: var(--white);
+  border-radius: 10px;
+  width: auto;
+  margin: 25% auto;
+  /* 15% from the top and centered */
+  padding: 20px; }
+  .modal-content footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; }
+  .modal-content .modal-btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 50px;
+    margin: 0 10px 10px 0;
+    z-index: 10; }
+
+/* The Close Button */
+.close {
+  color: var(--grey-dark);
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer; }
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  padding-top: 1rem;
+  color: var(--grey-dark); }
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px; }
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: var(--yellow-light);
+  color: var(--yellow-dark); }
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: var(--white);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--grey-extra-light);
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s; }
+
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+textarea {
+  resize: none;
+  border: none;
+  font-size: 1.5rem;
+  z-index: 10;
+  margin: 2rem; }
+
+textarea:focus {
+  border: none; }
+
+textarea::selection,
+textarea::-moz-selection {
+  background: var(--grey-light); }
+
+.force-select-all {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+  z-index: 11; }
+
+.modal-btn {
+  font-size: 1rem; }
+
+.copy-to-clip {
+  background: var(--blue-dark);
+  color: var(--white);
+  cursor: pointer; }
+
+.cancel {
+  background: var(--cancel-red);
+  color: var(--white);
+  cursor: pointer; }
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0; }
+  to {
+    top: 500;
+    opacity: 1; } }
