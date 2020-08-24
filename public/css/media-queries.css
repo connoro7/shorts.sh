@@ -3,54 +3,39 @@
   .body {
     width: 90vw;
     margin-left: 0;
-    margin-right: 0;
-  }
+    margin-right: 0; }
   .child {
-    width: 80vw;
-  }
+    width: 80vw; }
   .btn {
     padding: 15px 30px;
-    width: 100%;
-  }
+    width: 100%; }
   .footer-text {
     font-size: 0.5rem;
-    line-height: 20px;
-  }
+    line-height: 20px; }
   .modal-btn {
-    padding: 0px 20px;
-  }
+    padding: 0px 20px; }
   header {
     font-size: 1.2rem;
     margin-left: 0;
     margin-right: 0;
-    padding: 0;
-  }
-}
+    padding: 0; } }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   header {
-    font-size: 1.35rem;
-  }
-}
+    font-size: 1.35rem; } }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   header {
-    font-size: 1.75rem;
-  }
-}
+    font-size: 1.75rem; } }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   header {
-    font-size: 1.75rem;
-  }
-}
+    font-size: 1.75rem; } }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   header {
-    font-size: 2rem;
-  }
-}
+    font-size: 2rem; } }

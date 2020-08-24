@@ -3,7 +3,7 @@ form {
 }
 
 label {
-  font-family: monospace;
+  font-family: 'Russo One', monospace;
   font-size: 2rem;
   padding: 12px 12px;
   margin: 15px;
@@ -11,6 +11,8 @@ label {
 
 /* Fixes width of form input fields so that they are equal */
 input {
+  font-family: monospace;
+  font-size: 1.2rem;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
