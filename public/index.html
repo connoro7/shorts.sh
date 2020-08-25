@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-control" content="no-cache">
     <title>ezl.ink</title>
-    <!-- & EZ-CSS (for development only) -->
-    <!-- <link rel="stylesheet" href="https://ez-css.now.sh" /> -->
     <!-- & Font Awesome  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- & Icons & Favicons -->
@@ -14,16 +12,15 @@
     <link rel="icon" type="image/gif" href="favicon/favicon-32x32.png" />
     <!-- & In-house CSS -->
     <link rel="stylesheet" href="css/main.css" />
- 
   </head>
   <body>
     <div id="help">
       <i class="fa fa-question-circle fa-lg help help-icon"></i>
       <span class="help help-text">Help</span>
     </div>
-
     <header class="child">
       <h1>ezl.ink</h1>
+      <p>Simply Short URLs</p>
     </header>
     <main class="child" id="app">
       <form @submit.prevent="createUrl() ">
@@ -38,41 +35,32 @@
       </form>
       <!-- <pre> for dev testing -->
       <!-- <pre class="output" v-if="created">{{JSON.stringify(created, null, 2)}}</pre> -->
-      <!-- Modal -->
       <div id="output-modal" class="modal">
         <div class="modal-content center">
           <div class="modal-header">
             <span class="close">&times;</span>
             <h2>Your link:</h2>
           </div>
-          <div class="modal-body"></div>
+          <div class="modal-body">
           <textarea id="output-link" class="output-link force-select-all" placeholder="http://ezl.ink/"></textarea>
-          <footer>
-            <button class="copy-to-clip modal-btn"><i class="far fa-copy fa-lg"></i> Copy</button>
+        </div>
+          <footer id="modal-footer" class="modal-footer">
+            <p id="modal-footer-text" >Click the link to automatically copy it to your clipboard!</p>
+            <!-- <button id="copyBtn" class="copy-to-clip modal-btn"><i class="far fa-copy fa-lg"></i> Copy</button> -->
             <!-- <button id="close-modal" class="cancel cancel-modal modal-btn">Close</button> -->
           </footer>
         </div>
       </div>
-      
-
-      <!-- 
-        <form v-if="created" @submit.prevent="copyLink()">
-        <label for="created">Short Link:</label>
-
-        <input v-model="output" type="url" name="output" id="output" placeholder="http://ezl.ink/{{JSON.stringify(created)}}" />
-        <button type="button" onclick="copyLink()">Copy Link</button>
-      </form>
-     -->
     </main>
     <footer id="sticky-footer" class="child">
-      <div class="container text-center footer_icons">
+      <div class="container text-center footer_icons" target="_blank">
         <a href="mailto:connor@codewithconnor.com">
           <i class="fas fa-envelope fa-2x"></i>
         </a>
-          <a href="https://github.com/connoro7">
+          <a href="https://github.com/connoro7" target="_blank">
             <i class="fas fa-github fa-2x"></i>
           </a>
-          <a href="https://www.linkedin.com/in/connordillon/">
+          <a href="https://www.linkedin.com/in/connordillon/" target="_blank">
             <i class="fas fa-linkedin fa-2x"></i>
           </a>
         </a>

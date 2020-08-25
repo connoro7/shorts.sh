@@ -14,11 +14,22 @@
     line-height: 20px; }
   .modal-btn {
     padding: 0px 20px; }
+  textarea {
+    font-size: 1rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px; }
+  .modal-footer {
+    font-size: 0.8rem;
+    justify-content: center; }
   header {
     font-size: 1.2rem;
     margin-left: 0;
     margin-right: 0;
-    padding: 0; } }
+    padding: 0;
+    line-height: 20px; }
+  header > p {
+    font-size: 0.8rem; } }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
