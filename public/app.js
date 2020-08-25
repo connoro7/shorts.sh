@@ -22,10 +22,15 @@ const app = new Vue({
       })
       // Feeds into output in index.html
       this.created = await response.json()
+      document.getElementById('output-link').innerHTML = this.created.output
     },
   },
 })
 
+/**
+ * Modal Controller
+ * @description Sets modal dynamic functionality
+ */
 window.onload = function () {
   // Get the modal
   let modal = document.getElementById('output-modal')
@@ -36,55 +41,64 @@ window.onload = function () {
   // Get the <span> element that closes the modal
   let span = document.getElementsByClassName('close')[0]
 
-  let close = document.getElementById('close-modal')
-
   // When the user clicks on the button, open the modal
   btn.onclick = function () {
     modal.style.display = 'block'
-    console.log('btn event triggered, showing modal')
+    // console.log('btn event triggered, showing modal')
   }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function () {
     modal.style.display = 'none'
-    console.log('span close event triggered')
-  }
-
-  // When the user clicks on the `cancel` modal button, close the modal
-  close.onclick = function () {
-    modal.style.display = 'none'
-    console.log('close button event triggered')
+    // console.log('span close event triggered')
   }
 
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
-    console.log('user clicked away from modal, closing modal')
+    // console.log('user clicked away from modal, closing modal')
     if (event.target == modal) {
       modal.style.display = 'none'
     }
   }
 }
 
-/*
-var copyEmailBtn = document.querySelector('.js-emailcopybtn')
-copyEmailBtn.addEventListener('click', function (event) {
-  // Select the email link anchor text
-  var emailLink = document.querySelector('.js-emaillink')
-  var range = document.createRange()
-  range.selectNode(emailLink)
-  window.getSelection().addRange(range)
+/**
+ * Copy to Clipboard Controller
+ */
+function copyToClipboard() {
+  // console.log('copyToClipboard init')
 
-  try {
-    // Now that we've selected the anchor text, execute the copy command
-    var successful = document.execCommand('copy')
-    var msg = successful ? 'successful' : 'unsuccessful'
-    console.log('Copy email command was ' + msg)
-  } catch (err) {
-    console.log('Oops, unable to copy')
-  }
+  /* Get the text field */
+  let copyText = document.getElementById('output-link')
 
-  // Remove the selections - NOTE: Should use
-  // removeRange(range) when it is supported
-  window.getSelection().removeAllRanges()
+  /* Select the text field */
+  copyText.select()
+  copyText.setSelectionRange(0, 99999) /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand('copy')
+
+  /* Log the copied text */
+  // console.log(`Copied the text: ${copyText.value}`)
+}
+
+// Logging to ensure proper event bubbling
+let outputModal = document.querySelector('#output-modal')
+outputModal.addEventListener('click', function () {
+  // console.log(`#output-modal clicked`)
 })
-*/
+
+// Logging to ensure proper event bubbling
+let modalContent = document.querySelector('.modal-content')
+modalContent.addEventListener('click', function () {
+  // console.log(`.modal-content clicked`)
+})
+
+// Grabs content from generated #output-link text field and copies it to clipboard
+let outputLink = document.querySelector('#output-link')
+outputLink.addEventListener('click', function () {
+  // console.log(`#output-link clicked`)
+  copyToClipboard()
+  document.getElementById('modal-footer-text').innerHTML = 'Link copied!'
+  document.getElementById('modal-footer').style.backgroundColor = '#8cda26'
+})

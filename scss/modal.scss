@@ -19,11 +19,6 @@
   width: auto;
   margin: 25% auto; /* 15% from the top and centered */
   padding: 20px;
-  footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
 
   .modal-btn {
     text-transform: uppercase;
@@ -58,16 +53,23 @@
   color: var(--grey-dark);
 }
 
-/* Modal Body */
 .modal-body {
-  padding: 2px 16px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+/* Modal Body */
+.modal-body > textarea {
+  padding: 3vh;
 }
 
 /* Modal Footer */
 .modal-footer {
-  padding: 2px 16px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 16px;
   background-color: var(--yellow-light);
-  color: var(--yellow-dark);
+  color: var(--grey-dark);
 }
 
 /* Modal Content */
@@ -92,11 +94,13 @@
 }
 
 textarea {
+  width: 80%;
   resize: none;
   border: none;
   font-size: 1.5rem;
   z-index: 10;
   margin: 2rem;
+  cursor: pointer;
 }
 
 textarea:focus {

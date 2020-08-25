@@ -31,7 +31,6 @@ app.get('/:id', async (req, res) => {
   try {
     /// Waits for db.get('urls').findOne({slug}) to be returned from DB, returns boolean
     const url = await urls.findOne({ slug })
-    /// If url === true,
     if (url) {
       res.redirect(url.url)
     }
