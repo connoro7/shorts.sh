@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0, shrink-to-fit=no" />
-    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache" />
     <title>ezl.ink</title>
-    <!-- & Font Awesome  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!-- & Icons & Favicons -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <link rel="shortcut icon" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/gif" href="favicon/favicon-32x32.png" />
-    <!-- & In-house CSS -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -26,12 +28,11 @@
       <form @submit.prevent="createUrl() ">
         <label for="url">URL</label>
         <input v-model="url" name="url" id="url" />
-        <br/>
+        <br />
         <label for="slug">Slug</label>
         <input v-model="slug" name="slug" id="slug" />
         <br />
-        <button id="btn" class="btn" type="submit">Create
-        </button>
+        <button id="btn" class="btn" type="submit">Create</button>
       </form>
       <!-- <pre> for dev testing -->
       <!-- <pre class="output" v-if="created">{{JSON.stringify(created, null, 2)}}</pre> -->
@@ -42,10 +43,10 @@
             <h2>Your link:</h2>
           </div>
           <div class="modal-body">
-          <textarea id="output-link" class="output-link force-select-all" placeholder="http://ezl.ink/"></textarea>
-        </div>
+            <textarea id="output-link" class="output-link force-select-all" placeholder="http://ezl.ink/"></textarea>
+          </div>
           <footer id="modal-footer" class="modal-footer">
-            <p id="modal-footer-text" >Click the link to automatically copy it to your clipboard!</p>
+            <p id="modal-footer-text">Click the link to automatically copy it to your clipboard!</p>
             <!-- <button id="copyBtn" class="copy-to-clip modal-btn"><i class="far fa-copy fa-lg"></i> Copy</button> -->
             <!-- <button id="close-modal" class="cancel cancel-modal modal-btn">Close</button> -->
           </footer>
@@ -54,23 +55,13 @@
     </main>
     <footer id="sticky-footer" class="child">
       <div class="container text-center footer_icons" target="_blank">
-        <a href="mailto:connor@codewithconnor.com">
-          <i class="fas fa-envelope fa-2x"></i>
-        </a>
-          <a href="https://github.com/connoro7" target="_blank">
-            <i class="fas fa-github fa-2x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/connordillon/" target="_blank">
-            <i class="fas fa-linkedin fa-2x"></i>
-          </a>
+        <a href="https://github.com/connoro7/shorts.sh" target="_blank">
+          <i class="fas fa-github fa-2x"></i>
         </a>
       </div>
       <div class="footer-text">Copyright &copy; 2020 Connor Dillon</div>
     </footer>
-    
-    
-
   </body>
   <script defer src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
-    <script defer src="app.js"></script>
+  <script defer src="app.js"></script>
 </html>
