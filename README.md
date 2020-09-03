@@ -1,5 +1,7 @@
 # shorts.sh @ [ezl.ink](http://ezl.ink))
 
+![License](https://img.shields.io/github/license/connoro7/shorts.sh?style=for-the-badge) ![Last Commit](https://img.shields.io/github/last-commit/connoro7/shorts.sh?style=for-the-badge) 
+
 A simple, intuitive URL Shortener for the modern age.
 
 ## Available at [ezl.ink](http://ezl.ink)
